@@ -1,4 +1,4 @@
-#© 2021 allison Murdock
+#© 2023 Allison Howard
 
 apiVersion: apps/v1
 kind: Deployment
@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: prod-stedi-allison
-          image: us-docker.pkg.dev/my-devops-team-404512/allison-api/stedi-api:latest # This image needs to refer to the NEW Artifact registry repositorry
+          image: gcr.io/cubs-consulting/stedi # This image needs to refer to the NEW Artifact registry repositorry
           env:
             - name: REDIS_PASSWORD
               valueFrom:
